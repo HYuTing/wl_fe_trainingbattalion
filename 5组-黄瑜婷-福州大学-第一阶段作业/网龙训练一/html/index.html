@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>VR创客教室</title>
+</head>
+<body>
+    <div class="main">
+        <div class="menu">
+            <ul>
+                <li class="menu_item_head">
+                    <img class="menu_item_logo" src="../img/vrlogo.png">
+                    <span class="head_tittle" id="logo">VR创客教室</span>
+                </li>
+                <li class="menu_item_shead">
+                    课程列表
+                </li>
+                <li class="menu_item">
+                    <img class="menu_item_logo" src="../img/menulogo.png">
+                    <span>全部课程</span>
+                </li>
+                <li class="menu_item">
+                    <img class="menu_item_logo" src="../img/menulogo.png">
+                    <span>课程一 : 静夜思</span>
+                </li>
+                <li class="menu_item">
+                    <img class="menu_item_logo" src="../img/menulogo.png">
+                    <span>课程二 : 红军长征</span>
+                </li>
+                <li class="menu_item menu_item_onclick">
+                    <img class="menu_item_logo" src="../img/menulogoonclick.png">
+                    <span>课程三 : 活字印刷术</span>
+                </li>
+                <li class="menu_item">
+                    <img class="menu_item_logo" src="../img/menulogo.png">
+                    <span>课程四 : 郑和下西洋</span>
+                </li>
+                <li class="menu_item">
+                    <img class="menu_item_logo" src="../img/menulogo.png">
+                    <span>课程五 : 梦想之家</span>
+                </li>
+            </ul>
+        </div>
+        <div class="header">
+            <div class="header_top">
+                <div class="user">
+                    <img class="icon_user" src="../img/icon_user.png">
+                    <span>用户 : 王小明</span>
+                    <span class="midborder">|</span>
+                    <img class="icon_user" src="../img/icon_id.png">
+                    <span>身份 : 学生</span>
+                </div>
+                <div class="header_button_chose">
+                    <div>
+                        <span>设备选择</span>
+                        <img class="icon_trangle" src="../img/icon_trangle.png">
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <ul class="header_tab">
+                    <li class="header_tab_item_onclick">我的作品</li>
+                    <span class="header_tab_midborder midborder">|</span>
+                    <li>班级作品</li>
+                </ul>
+                <div class="header_btn header_btn_submit" id="submit_btn">
+                    <img class="icon_submit" src="../img/submit.png">
+                    提交作品
+                </div>
+                <div class="header_btn header_btn_addnew" id="addnew_btn">
+                        <img class="icon_submit" src="../img/addnew.png">
+                    新建作品
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container_search">
+                <div class="container_search_input">
+                    <input type="text" placeholder="搜索资源...">
+                    <img src="../img/search_icon.png" class="icon_search">
+                </div>
+                <input type="button" value="搜索" class="container_search_btn">
+            </div>
+            <div class="container_resource">
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover1.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover1.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover1.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover1.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+                <div class="container_resource_items">
+                    <div class="container_resource_img">
+                        <img src="../img/cover.jpg" class="resource_img">
+                        <div class="container_shade">
+                            <img src="../img/friend.png" class="icon_friend">
+                            <span class="members">李冉、涂佳佳、李婷婷、张婷</span>
+                            <span class="time">2016/08/04 10:55</span>
+                        </div>
+                        <div class="resource_items_icon_container container_edit">
+                            <img src="../img/icon_edit.png" class="resource_items_icon">
+                            <p>编辑</p>
+                        </div>
+                        <div class="resource_items_icon_container container_paly">
+                            <img src="../img/icon_play.png" class="resource_items_icon icon_play">
+                            <p>播放</p>
+                        </div>
+                        <div class="resource_items_icon_container container_delete">
+                            <img src="../img/icon_delete.png" class="resource_items_icon">
+                            <p>删除</p>
+                        </div>
+
+                        <div class="youcannotseeme">
+                            <div class="img_value">
+                                <p>李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="resource_name">郑和下西洋</p>
+                </div>
+            </div>
+            <div class="container_catalogue">
+                <div class="catalogue">
+                    <span class="catalogue_btn" id="pre_btn">&lt;</span>
+                    <span class="catalogue_btn catalogue_numbtn catalogue_btn_onclick">1</span>
+                    <span class="catalogue_btn catalogue_numbtn">2</span>
+                    <span class="catalogue_btn catalogue_numbtn">3</span>
+                    <span class="catalogue_btn catalogue_numbtn">4</span>
+                    <span class="catalogue_btn catalogue_numbtn">5</span>
+                    <span class="catalogue_btn catalogue_btn_more">...</span>
+                    <span class="catalogue_btn catalogue_numbtn">100</span>
+                    <span class="catalogue_btn" id="next_btn">&gt;</span>
+                </div>
+            </div>
+        </div>
+        <div class="main_shade" id="main_shade">
+            <div class="dialog">
+                <div class="dialog_head">
+                    新建作品
+                    <img src="../img/close.png" class="icon_close" id="icon_close">
+                </div>
+                <div class="dialog_container">
+                    <span class="addnew_item">资源名称</span><input type="text" class="dialog_container_input" value="真实世界">
+                    <br/><br/>
+                    <span class="addnew_item">作者</span><div class="author_input"></div>
+                    <div class="addauthor_btn" id="addauthor_btn">
+                        <img src="../img/addauthor.png" class="addauthor_btn_img">
+                    </div>
+                    <br/><br/><br/><br/>
+                    <span class="addnew_item imgupload_item">配图</span>
+                    <div class="div_imgupload">
+                        <span class="imgupload_link">点击上传图片</span>
+                        <input type="file" class="imgupload">
+                    </div>
+                    <br/><br/>
+                    <span class="addnew_item">简介</span><textarea class="work_intro"></textarea>
+                </div>
+                <div class="dialog_footer">
+                    <input type="button" value="确定提交" class="submit_btn">
+                    <p class="submit_tip">提交后显示在班级作品区</p>
+                </div>
+            </div>
+            <div class="dialog_shade" id="dialog_shade">
+                <div class="addmember">
+                    <div class="dialog_head">
+                        班级成员
+                        <img src="../img/close.png" class="icon_close" id="icon_close2">
+                    </div>
+                    <div class="member_container">
+                        <div class="member_container_noyep">
+                            <div class="member_search">
+                                <input type="text">
+                            </div>
+                            <div class="member_canchose">
+                                <ul>
+                                    <li>李明</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member_container_botton">
+                            <input type="button" value="添加" class="member_container_bottons add_btn">
+                            <input type="button" value="删除" class="member_container_bottons delete_btn">
+                        </div>
+                        <div class="member_container_in">
+                            <div class="member_canchose member_chosed"></div>
+                        </div>
+                    </div>
+                    <div class="dialog_footer classmember">
+                        <input type="button" value="确定" class="submit_btn classmember_check">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>
