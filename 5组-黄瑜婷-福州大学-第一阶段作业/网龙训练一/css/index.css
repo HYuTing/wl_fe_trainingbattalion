@@ -481,7 +481,7 @@ body {
     left: 0px;
     right: 0px;
     height: 100%;
-    background: rgba(26, 26, 26, 0.78);
+    background: #1a1a1ac7;
     z-index: 99;
 }
 .dialog {
@@ -654,26 +654,20 @@ body {
     -moz-transform: scale(1); 
 }
 
-.dialog_shade {
+.addmember {
     display: none;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background: rgba(26, 26, 26, 0.78);
-}
-.addmember {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     width: 400px;
-    height: 560px;
+    height: 490px;
     border-radius: 10px;
     background: #ffffff;
+    box-shadow: 0px 0px 10px #1a1a1a7e;
 }
 
 .member_container {
