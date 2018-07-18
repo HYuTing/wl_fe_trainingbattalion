@@ -127,10 +127,10 @@ body {
     top: 16px;
     right: 54px;
     cursor: pointer;
-    width: 88px;
     height: 32px;
     line-height: 30px;
     padding-left: 12px;
+    padding-right: 7px;
     border: 1px solid #16a4fa;
     border-radius: 2px;
     font-size: 16px;
@@ -143,14 +143,14 @@ body {
 
 .header_bottom {
     position: relative;
-    padding-left: 305px;
+    padding-left: 300px;
 }
 .header_tab li {
     float: left;
-    padding: 0 17px;
+    padding: 0 16px;
     height: 46px;
     line-height: 44px;
-    font-size: 16px;
+    font-size: 18px;
     color: #4d5b67;
     cursor: pointer;
 }
@@ -167,11 +167,10 @@ body {
 
 .header_btn {
     position: absolute;
-    top: 8px;
+    top: 7px;
     font-size: 16px;
-    width: 94px;
-    height: 30px;
-    line-height: 26.6px;
+    height: 32px;
+    line-height: 30px;
     padding: 0px 12px;
     border: 1px solid #16a4fa;
     border-radius: 2px;
@@ -206,24 +205,27 @@ body {
 .container_search {
     position: relative;
     width: 100%;
-    height: 56px;
+    height: 60px;
 }
 .container_search_input {
     position: absolute;
     right: 176px;
-    width: 288px;
-    height: 30px;
+    width: 298px;
+    height: 34px;
     padding: 0px 10px;
+    padding-left: 0px;
     border: 1px solid #e2e2e2;
     border-radius: 2px;
     background: #ffffff;
 }
 .container_search_input input {
     width: 264px;
-    height: 30px;
+    height: 34px;
+    padding-left: 10px;
     border: none;
     font-size: 16px;
     color: #4d5b67;
+    background: transparent;
 }
 .container_search_input input::-webkit-input-placeholder { /* WebKit browsers */
     color: #bfbfbf;
@@ -239,14 +241,14 @@ body {
 }
 .icon_search {
     position: absolute;
-    top: 3px;
+    top: 5px;
     right: 5px;
     width: 24px;
 }
 .container_search_btn {
     position: absolute;
     right: 94px;
-    padding: 6px 22px;
+    padding: 5.5px 20px;
     border: 1px solid #16a4fa;
     border-radius: 2px;
     background: -webkit-linear-gradient(#30b8ff , #1a92da); /* Safari 5.1 - 6.0 */
@@ -254,6 +256,7 @@ body {
     background: -moz-linear-gradient(#30b8ff , #1a92da); /* Firefox 3.6 - 15 */
     background: linear-gradient(#30b8ff , #1a92da); /* 标准的语法 */
     color: #ffffff;
+    font-size: 16px;
     cursor: pointer;
 }
 .container_resource {
@@ -297,31 +300,35 @@ body {
 }
 .members {
     position: absolute;
-    top: 7px;
+    top: 6px;
     left: 48px;
     display: inline-block;
     width: 152px;
-    height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     margin-bottom: -5px;
+    font-size: 14px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(1);
 }
 .time {
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 18px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(1); 
 }
 .resource_items_icon_container {
     position: absolute;
-    bottom: 3px;
-    width: 28px;
+    bottom: 2px;
+    width: 40px;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    font-size: 14px;
     color: #a0a0a0;
     transition: color .1s;
+    font-size: 14px;
 }
 .resource_items_icon_container:hover {
     color: #f5a425;
@@ -376,6 +383,8 @@ body {
     line-height: 23px;
     color: #4d5b67;
     background: #ffffff;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(1);
 }
 
 @media screen and (max-width:1840px){
@@ -408,7 +417,6 @@ body {
 
 .container_catalogue {
     margin-top: 44px;
-    padding: 10px;
     padding-bottom: 60px;
 }
 .catalogue {
@@ -466,8 +474,8 @@ body {
 }
 
 .main_shade {
-    display: none;
-    position: absolute;
+    /*display: none;*/
+    position: fixed;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -510,24 +518,36 @@ body {
 }
 .dialog_container {
     position: relative;
-    padding: 24px 38px;
+    padding: 20px 38px;
 }
+
+.item {
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
 .addnew_item {
     display: inline-block;
-    width: 66px;
+    width: 74px;
     text-align: right;
     margin-right: 10px;
+    font-size: 16px;
 }
 .dialog_container_input {
     width: 260px;
     padding: 4px 8px;
     border: 1px solid #c4c4c4;
     color: #4d5b67;
+    font-size: 16px;
+}
+.author_input_item {
+    position: relative;
+    min-height: 66px;
 }
 .author_input {
     position: absolute;
-    top: 72px;
-    left: 114px;
+    top: 0px;
+    left: 84px;
     width: 350px;
     min-height: 61px;
     padding: 4px 8px;
@@ -536,8 +556,8 @@ body {
 }
 .addauthor_btn {
     position: absolute;
-    top: 117px;
-    right: 164px;
+    top: 39px;
+    right: 118px;
     width: 26px;
     height: 26px;
     border: 1px solid #16a4fa;
@@ -554,12 +574,16 @@ body {
     margin-left: 3px;
 }
 
+.imgupload_input_item {
+    position: relative;
+    padding-top: 0px;
+}
 .imgupload_item {
     line-height: 34px;
 }
 .div_imgupload {
     position: absolute;
-    top: 164px;
+    top: 0px;
     width: 260px;
     height: 20px;
     padding: 4px 8px;
@@ -572,7 +596,7 @@ body {
     *zoom: 1;
 }
 .imgupload_link {
-    font-size: 14px;
+    font-size: 16px;
     color: #a0a0a0;
 }
 .imgupload {
@@ -586,10 +610,15 @@ body {
     cursor: pointer;
 }
 
+.work_intro_item {
+    position: relative;
+}
 .work_intro {
     position: absolute;
-    width: 500px;
-    min-height: 120px;
+    top: 0px;
+    width: 488px;
+    min-height: 100px;
+    padding: 6px;
     border: 1px solid #c4c4c4;
     color: #4d5b67;
 }
@@ -621,6 +650,8 @@ body {
     font-size: 13px;
     margin-top: 4px;
     color: #a0a0a0;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(1); 
 }
 
 .dialog_shade {

@@ -341,20 +341,26 @@
                     <img src="../img/close.png" class="icon_close" id="icon_close">
                 </div>
                 <div class="dialog_container">
-                    <span class="addnew_item">资源名称</span><input type="text" class="dialog_container_input" value="真实世界">
-                    <br/><br/>
-                    <span class="addnew_item">作者</span><div class="author_input"></div>
-                    <div class="addauthor_btn" id="addauthor_btn">
-                        <img src="../img/addauthor.png" class="addauthor_btn_img">
-                    </div>
-                    <br/><br/><br/><br/>
-                    <span class="addnew_item imgupload_item">配图</span>
-                    <div class="div_imgupload">
-                        <span class="imgupload_link">点击上传图片</span>
-                        <input type="file" class="imgupload">
-                    </div>
-                    <br/><br/>
-                    <span class="addnew_item">简介</span><textarea class="work_intro"></textarea>
+                        <div class="item">
+                            <span class="addnew_item">资源名称</span><input type="text" class="dialog_container_input" value="真实世界">
+                        </div>
+                        <div class="item author_input_item">
+                            <span class="addnew_item">作者</span><div class="author_input"></div>
+                            <div class="addauthor_btn" id="addauthor_btn">
+                                <img src="../img/addauthor.png" class="addauthor_btn_img">
+                            </div>
+                        </div>
+                        <div class="item imgupload_input_item">
+                            <span class="addnew_item imgupload_item">配图</span>
+                            <div class="div_imgupload">
+                                <span class="imgupload_link">点击上传图片</span>
+                                <input type="file" class="imgupload">
+                            </div>
+                        </div>
+                        <div class="item work_intro_item">
+                            <span class="addnew_item">简介</span><textarea class="work_intro"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="dialog_footer">
                     <input type="button" value="确定提交" class="submit_btn">
