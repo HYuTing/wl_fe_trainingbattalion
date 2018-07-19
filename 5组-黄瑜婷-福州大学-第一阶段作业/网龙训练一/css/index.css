@@ -219,7 +219,7 @@ body {
     background: #ffffff;
 }
 .container_search_input input {
-    width: 264px;
+    width: 296px;
     height: 34px;
     padding-left: 10px;
     border: none;
@@ -262,6 +262,7 @@ body {
 .container_resource {
     display: flex;
     flex-wrap: wrap;
+    min-height: 710px;
 }
 .container_resource_items {
     position: relative;
@@ -465,7 +466,7 @@ body {
 }
 .noresource {
     position: absolute;
-    top: 0px;
+    top: -100px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -878,5 +879,9 @@ body {
     display: none;
 }
 .remove {
+    display: none;
+}
+
+.container_resource,.container_catalogue {
     display: none;
 }

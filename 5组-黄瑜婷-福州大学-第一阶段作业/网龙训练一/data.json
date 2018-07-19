@@ -1,0 +1,70 @@
+﻿{
+	"status": 0,
+	"msg": "success",
+	"data": [{
+		"course": "课程一：静夜思",
+		"resource": [{
+			"authors": "李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明",
+			"img": "../img/cover1.jpg",
+			"date": "20186/08/04 10:55",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover1.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover1.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover1.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "静夜思"
+		}]
+	},{
+		"course": "课程二：红军长征",
+		"resource": [{
+			"authors": "李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰黎明",
+			"img": "../img/cover2.jpg",
+			"date": "2018/07/19 18:08",
+			"title": "红军长征"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover2.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "红军长征"
+		},{
+			"authors": "暂无作者",
+			"img": "../img/cover2.jpg",
+			"date": "2018/07/20 18:08",
+			"title": "红军长征"
+		}]
+	},{
+		"course": "课程三：活字印刷术",
+		"resource": []
+	},{
+		"course": "课程四：郑和下西洋",
+		"resource": []
+	},{
+		"course": "课程五：梦想之家",
+		"resource": []
+	}]	
+}
