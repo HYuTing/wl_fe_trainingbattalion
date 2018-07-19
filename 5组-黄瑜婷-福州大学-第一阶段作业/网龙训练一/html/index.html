@@ -345,54 +345,79 @@
                             <span class="addnew_item">资源名称</span><input type="text" class="dialog_container_input" value="真实世界">
                         </div>
                         <div class="item author_input_item">
-                            <span class="addnew_item">作者</span><div class="author_input"></div>
+                            <span class="addnew_item">作者</span>
+                            <div class="author_input">
+                                <ul id="membercontainer">
+                                    <!--li class="div_membercontainer">李明<img src="../img/close.png" class="deletemember"></li-->
+                                </ul>
+                            </div>
                             <div class="addauthor_btn" id="addauthor_btn">
                                 <img src="../img/addauthor.png" class="addauthor_btn_img">
                             </div>
                         </div>
                         <div class="item imgupload_input_item">
                             <span class="addnew_item imgupload_item">配图</span>
-                            <div class="div_imgupload">
-                                <span class="imgupload_link">点击上传图片</span>
-                                <input type="file" class="imgupload">
+                            <div class="div_imgupload" id="div_imgupload">
+                                <span class="imgupload_link" id="imgupload_link">点击上传图片</span>
+                                <input type="file" class="imgupload" id="imgupload">
                             </div>
                         </div>
                         <div class="item work_intro_item">
-                            <span class="addnew_item">简介</span><textarea class="work_intro"></textarea>
+                            <span class="addnew_item">简介</span>
+                            <div class="work_intro">
+                                <textarea class="textarea_work_intro"></textarea>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="dialog_footer">
-                    <input type="button" value="确定提交" class="submit_btn">
+                    <input type="button" value="确定提交" class="submit_btn" id="worksubmit_btn">
                     <p class="submit_tip">提交后显示在班级作品区</p>
                 </div>
-                <div class="addmember" id="addmember">
-                    <div class="dialog_head">
-                        班级成员
-                        <img src="../img/close.png" class="icon_close" id="icon_close2">
-                    </div>
-                    <div class="member_container">
-                        <div class="member_container_noyep">
-                            <div class="member_search">
-                                <input type="text">
-                            </div>
-                            <div class="member_canchose">
-                                <ul>
-                                    <li>李明</li>
-                                </ul>
-                            </div>
+            </div>
+        </div>
+        <div class="secondary_shade" id="secondary_shade">
+            <div class="addmember" id="addmember">
+                <div class="dialog_head">
+                    班级成员
+                    <img src="../img/close.png" class="icon_close" id="icon_close2">
+                </div>
+                <div class="member_container">
+                    <div class="member_container_noyep">
+                        <div class="member_search">
+                            <input type="text" id="member_search_input">
+                            <img src="../img/search_icon.png" class="icon_search member_icon_search" id="member_icon_search">
                         </div>
-                        <div class="member_container_botton">
-                            <input type="button" value="添加" class="member_container_bottons add_btn">
-                            <input type="button" value="删除" class="member_container_bottons delete_btn">
-                        </div>
-                        <div class="member_container_in">
-                            <div class="member_canchose member_chosed"></div>
+                        <div class="member_canchose">
+                            <ul class="ul_member_canchose">
+                                <li class="cannotfind">搜索结果为空</li>
+                                <li class="li_member_canchose">李明1</li>
+                                <li class="li_member_canchose">李明2</li>
+                                <li class="li_member_canchose">李明3</li>
+                                <li class="li_member_canchose">李明4</li>
+                                <li class="li_member_canchose">李明5</li>
+                                <li class="li_member_canchose">李明6</li>
+                                <li class="li_member_canchose">李明7</li>
+                                <li class="li_member_canchose">李明8</li>
+                                <li class="li_member_canchose">李明9</li>
+                                <li class="li_member_canchose">李明10</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="dialog_footer classmember">
-                        <input type="button" value="确定" class="submit_btn classmember_check">
+                    <div class="member_container_botton">
+                        <input type="button" value="添加" class="member_container_bottons add_btn" id="member_add_btn">
+                        <input type="button" value="删除" class="member_container_bottons delete_btn" id="member_delete_btn">
                     </div>
+                    <div class="member_container_in">
+                        <div class="member_canchose member_chosed">
+                            <ul class="ul_member_chosed" id="ul_member_chosed">
+                                    <!--li class="li_member_chosed"-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog_footer classmember">
+                    <input type="button" value="确定" class="submit_btn classmember_check" id="classmember_check">
                 </div>
             </div>
         </div>
