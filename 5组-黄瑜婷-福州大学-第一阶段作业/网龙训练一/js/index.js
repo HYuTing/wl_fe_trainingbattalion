@@ -327,10 +327,20 @@ div_imgupload.addEventListener('click', function() {
 })
 
 var worksubmit_btn = document.getElementById('worksubmit_btn');
+var dialog_container_input = document.getElementById('dialog_container_input');
+
+dialog_container_input.addEventListener('click', function() {
+    document.getElementById('addnew_item_attention').style.display = 'none';
+})
 
 worksubmit_btn.addEventListener('click', function() {
-    document.body.style.overflow = 'visible';
-    main_shade.style.display = 'none';
+    if(dialog_container_input.value == '') {
+        document.getElementById('addnew_item_attention').style.display = 'block';
+    }
+    else {
+        document.body.style.overflow = 'visible';
+        main_shade.style.display = 'none';
+    }
 })
 
 var header_tab = document.getElementById('header_tab');

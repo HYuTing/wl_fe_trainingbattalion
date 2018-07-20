@@ -885,3 +885,12 @@ body {
 .container_resource,.container_catalogue {
     display: none;
 }
+
+.addnew_item_attention {
+    display: none;
+    position: absolute;
+    top: 27px;
+    left: 412px;
+    font-size: 14px;
+    color: rgb(255, 79, 47);
+}

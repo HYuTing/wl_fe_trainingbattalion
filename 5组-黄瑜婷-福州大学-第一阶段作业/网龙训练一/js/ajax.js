@@ -125,6 +125,10 @@
 
             var menu_item_onclick = document.getElementsByClassName('menu_item_onclick');
 
+            var catalogue_btn = document.getElementsByClassName('catalogue_btn');
+            var catalogue_btn_onclick = document.getElementsByClassName('catalogue_btn_onclick');
+            var catalogue_numbtn = document.getElementsByClassName('catalogue_numbtn');
+
             menu_item[0].addEventListener('click', function() {
                 firsload(tote, -1);
             })
@@ -140,6 +144,155 @@
 
                     //alert('这里是'+res.data[index].resource.length+','+index);
                     firsload(res.data[index].resource.length, index);
+
+                    /* 分页初始化 */
+                    for(var j=1; j<catalogue_numbtn.length; j++) {
+                        catalogue_numbtn[j].classList.remove('catalogue_btn_onclick');
+                    }
+                    catalogue_numbtn[0].classList.add('catalogue_btn_onclick');
+                })
+            }
+
+
+            /* 分页 */
+            function paging(courseid, page) {
+                var course_resource_len;
+                if(courseid>=0) {course_resource_len = res.data[courseid].resource.length;}
+                else if(courseid==-1) {course_resource_len = tote;}
+
+                var needPage = parseInt(course_resource_len/8);
+                var lastPage = course_resource_len%8;
+
+                if(lastPage>0) {
+                    needPage += 1;
+                }
+
+                // console.log('需要'+ needPage);
+                // console.log('最后一页'+ lastPage);
+                console.log(page);
+
+                if(page>needPage) {
+                    alert('没有更多资源');
+                    for(var j=0; j<catalogue_numbtn.length; j++) {
+                        catalogue_numbtn[j].classList.remove('catalogue_btn_onclick');
+                        if(catalogue_numbtn[j].innerHTML == needPage) {
+                            catalogue_numbtn[j].classList.add('catalogue_btn_onclick');
+                        }
+                    }
+                }
+                if(courseid>=0) {
+                    if(page==needPage) {
+                        for(var i=0; i<8; i++) {
+                            container_resource_items[i].style.display = 'block';
+                        }
+                    
+                        if(lastPage>0 && lastPage<=8) {
+                            for(var i=lastPage; i<8; i++) {
+                                container_resource_items[i].style.display = 'none';
+                            }
+                        }
+
+                        for(var j=0; j<lastPage; j++){
+                            resource_img[j].src = res.data[courseid].resource[(page-1)*8+j].img;
+                            members[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].authors;
+                            time[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].date;
+                            img_value[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].authors;
+                            resource_name[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].title;
+                        }
+                    }
+                    else if(page<needPage){
+                        //alert(page);
+                        for(var i=0; i<8; i++) {
+                            container_resource_items[i].style.display = 'block';
+                        }
+
+                        for(var j=0; j<8; j++){
+                            resource_img[j].src = res.data[courseid].resource[(page-1)*8+j].img;
+                            members[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].authors;
+                            time[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].date;
+                            img_value[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].authors;
+                            resource_name[j].innerHTML = res.data[courseid].resource[(page-1)*8+j].title;
+                        }
+                    }
+                }
+                else {
+                    if(page==needPage) {
+                        for(var i=0; i<8; i++) {
+                            container_resource_items[i].style.display = 'block';
+                        }
+                    
+                        if(lastPage>0 && lastPage<=8) {
+                            for(var i=lastPage; i<8; i++) {
+                                container_resource_items[i].style.display = 'none';
+                            }
+                        }
+
+                        for(var i=0,k=0,m=0; i<res.data.length; i++) {
+                            for(var j=0; j<res.data[i].resource.length; j++,k++) {
+                                if(k >= beginNum && k<(beginNum+needPage)) {
+                                    resource_img[m].src = res.data[i].resource[j].img;
+                                    members[m].innerHTML = res.data[i].resource[j].authors;
+                                    time[m].innerHTML = res.data[i].resource[j].date;
+                                    img_value[m].innerHTML = res.data[i].resource[j].authors;
+                                    resource_name[m].innerHTML = res.data[i].resource[j].title;
+                                    m++;
+                                }
+                                if(m == needPage) {
+                                    break;
+                                }
+                            }
+                            if(m == needPage) {
+                                break;
+                            }
+                        }
+                    }
+                    else if(page<needPage) {
+                        
+                        for(var i=0; i<8; i++) {
+                            container_resource_items[i].style.display = 'block';
+                        }
+                        
+                        //alert('需要'+ needPage + '最后一页'+ lastPage);
+                        var beginNum = (page-1)*8;
+                        //alert('从'+ beginNum + '开始');
+
+                        for(var i=0,k=0,m=0; i<res.data.length; i++) {
+                            for(var j=0; j<res.data[i].resource.length; j++,k++) {
+                                if(k >= beginNum && k<(beginNum+8)) {
+                                    resource_img[m].src = res.data[i].resource[j].img;
+                                    members[m].innerHTML = res.data[i].resource[j].authors;
+                                    time[m].innerHTML = res.data[i].resource[j].date;
+                                    img_value[m].innerHTML = res.data[i].resource[j].authors;
+                                    resource_name[m].innerHTML = res.data[i].resource[j].title;
+                                    m++;
+                                }
+                                if(m == 8) {
+                                    break;
+                                }
+                            }
+                            if(m == 8) {
+                                break;
+                            }
+                        }
+                    }
+                }
+                    
+            }
+
+            for(var i=0; i<catalogue_btn.length; i++) {
+                catalogue_btn[i].addEventListener('click', function() {
+                    //alert(catalogue_btn_onclick[0].innerHTML);
+                    var page = catalogue_btn_onclick[0].innerHTML;
+                    var courseid;
+
+                    for(var j=0; j<menu_item.length; j++) {
+                        if(menu_item[j].className == 'menu_item menu_item_onclick') {
+                            courseid = j-1;
+                            //alert(courseid);
+                        }
+                    }
+                
+                    paging(courseid, page);
 
                 })
             }
